@@ -49,6 +49,14 @@ input {
     display: none;
 }
 
+.done {
+    border: 1px solid #ff69b4;
+    background: #eee;
+    color: #ff69b4;
+    border-radius: 5px;
+    height: 25px;
+}
+
 .material-icons {
     border: none;
     background: #eee;
