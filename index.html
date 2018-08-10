@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="form">
+        <h1>TODO List</h1>
+        <section class="greeting">A place to store the things you have to do!</section>
+        <input class="filter" type="text" placeholder="Filter your to-dos">
+
+        <section ng-controller="TodoController as toDo">
+
+            <ol>
+                <li ng-repeat="item in toDo.list track by $index" ng-class="{firstClass: item.completed}">
+                    <button type="button" class="done" ng-if="item.completed === false">Complete</button> {{item.task}}
+                    <button type="button" class="material-icons">close</button>
+                </li>
+
+            </ol>
+        </section>
+        <input class="text" type="text" placeholder="Add to your to do">
+        <button class="add" type="button">Add</button>
+    </form>
+
+    <script src="https://code.angularjs.org/1.6.5/angular.min.js "></script>
+    <script src="module.js "></script>
+    <script src="ctrl.js "></script>
+</body>
+
+</html>
