@@ -30,6 +30,7 @@ input {
     color: #bbb;
     border-radius: 5px;
     height: 40px;
+    font-size: 30px;
 }
 
 .greeting {
@@ -57,7 +58,7 @@ li {
     display: none;
 }
 
-.done {
+.complete {
     border: 1px solid #ff69b4;
     background: #eee;
     color: #ff69b4;

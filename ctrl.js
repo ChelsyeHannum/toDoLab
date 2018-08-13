@@ -4,7 +4,7 @@
      const vm = this;
      vm.list = [{
              task: "Walk the dog",
-             completed: true
+             completed: false
          },
          {
              task: "Pick up groceries",
@@ -12,7 +12,7 @@
          },
          {
              task: "Do the dishes",
-             completed: true
+             completed: false
 
          },
          {
@@ -21,10 +21,19 @@
          },
      ]
 
-     vm.addItem = (newItem) => {
+     vm.addTask = (newTask) => {
          vm.list.push({
-             task: newItem.task
+             task: newTask,
+             completed: false
          });
+     };
+
+     vm.completeTask = (index) => {
+         vm.list[index].completed = true
+     };
+
+     vm.removeTask = (index) => {
+         vm.list.splice(index, 1);
      };
  };
 
